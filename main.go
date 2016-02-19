@@ -47,7 +47,7 @@ func main() {
 
 	mux := mux.NewRouter()
 	mux.HandleFunc("/", SteveHandler(true))
-	mux.PathPrefix("/protected").Methods("GET").Handler(negroni.New(negroni.Handler(IsAuthenticated("VALID")), negroni.Handler(IsAuthorized("http://avi.acs.io/engine/update"))))
+	mux.PathPrefix("/protected").Methods("GET").Handler(negroni.New(negroni.Handler(IsAuthenticated("1VALID")), negroni.Handler(IsAuthorized("http://avi.acs.io/engine/update"))))
 
 	log.Println("Listening....")
 	http.ListenAndServe(":8080", mux)
