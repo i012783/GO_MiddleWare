@@ -6,6 +6,7 @@ import(
 	"github.com/gorilla/mux"
 	"log"
 	"github.com/codegangsta/negroni"
+	"net/url"
 )
 
 func SteveHandler(b bool) http.HandlerFunc {
